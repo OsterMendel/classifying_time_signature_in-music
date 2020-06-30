@@ -43,10 +43,6 @@ Navigating paths to audio samples and transforming into features, then structuri
 
 
 
-
-
-
-
 ## Data 
 
 ### Collection 
@@ -58,7 +54,9 @@ I then used Spotify's API to search up these songs by three conditions, track na
 - 128 in 3/4 time
 - 42 in 5/4 time.
 
----ADD visual of classes for top genre
+
+<img src="class_dist_by_genre.png" />
+
 
 ### Exploring
 
@@ -87,13 +85,18 @@ Mel Frequency Cepstral Coefficient
 
 ## Modeling
 
+### Class Imbalance
 Baseline model scores an accuracy of 85% always classifying the majority class of 4/4 time.
 Since I had a significant class imbalance I made use of SMOTE to upsample the two remaining classes of 3/4 and 5/4 time.
+<img src="class_imbalance.png" />
 
+### Models
 
-### what?
+work in progress...
 
+### Evaluation
 
+work in progress...
 
 
 
