@@ -10,8 +10,7 @@ We are all familiar with the impulse of tapping along while vibing to a good son
 
 <img src="time-signature.png" />
 
-The goal of this project is to use machine learning to classify an audio sample's time signature by finding temporal patterns.<br>
-Beyond an exercise in modelling a human response to a musical stimulus, this can be useful for a dj who wants to filter songs by the way we dance to it, or for music interaction systems which can search through a library of beats and apply a match for a given audio sample. 
+The goal of this project is to use machine learning to classify an audio sample's time signature by finding temporal patterns. Beyond an exercise in modelling a human response to a musical stimulus, this can be useful for a dj who wants to filter songs by the way we dance to it, or for music interaction systems which can search through a library of beats and apply a match for a given audio sample. 
 
 
 ### Files
@@ -27,20 +26,20 @@ Navigating paths to audio samples and transforming into features, then structuri
 
 #### Csv files
 - clean_track_info.csv 
-    track_fma_id,
-    track_spot_id,
-    time_signature,
-    time_sig_confidence,
-    tracks_id,
-    track_name,
-    artist_name,
-    album_name,
-    track_bit,
-    track_top_genre
+    <br>track_fma_id,
+    <br>track_spot_id,
+    <br>time_signature,
+    <br>time_sig_confidence,
+    <br>tracks_id,
+    <br>track_name,
+    <br>artist_name,
+    <br>album_name,
+    <br>track_bit,
+    <br>track_top_genre
 - final_df.csv
-    track_id
-    mfcc features
-    target variable
+    <br>track_id
+    <br>mfcc features
+    <br>target variable
 
 
 
