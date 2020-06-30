@@ -67,7 +67,7 @@ I then used Spotify's API to search up these songs by three conditions, track na
 For audio features I used Librosa to transform each sample into 20 Mel Frequency Cepstral Coefficients (MFCC).
 I then took the mean for each coefficient vector for the length of sample and formed a DataFrame with the target variable being a class in time signature. 
 
-
+#### Adding a visula with some exploration of these features
 
 
 
@@ -81,16 +81,19 @@ Since I had a significant class imbalance I made use of SMOTE to upsample the tw
 
 ### Models
 
-work in progress...
+Trained a random forest with 50 estimators got an accuracy of 77% 
+gridsearch with xgboost didnt produce anything significantlly better.
+
+I am working on 
+1. removing 5/4 timing, to try and predict the two most common classes in time signature 4/4 and 3/4
+2. check on time signature confidence (from spotify metadata), set a threshold and remove rows which don't pass the threshold feed this into models
+3. More feature engineering, the mean for each MFCC vector may not be the correct choice -Use the full MFCC vector and feed into Sequential neural net
 
 ### Evaluation
 
 work in progress...
 
 
-## Future steps
-
-work in progress...
 
 
 ## Permissions & Licenses
