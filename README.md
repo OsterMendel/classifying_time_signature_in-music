@@ -49,11 +49,11 @@ Navigating paths to audio samples and transforming into features, then structuri
 
 ## Data 
 
-### collection (and usage)
+### Collection 
 
 For the actual audio samples I downloaded 8000 30 second clips from 
 <a href="https://os.unil.cloud.switch.ch/fma/fma_small.zip">fma_small.zip</a>. <br>The metadata for those files can be found at <a href="https://os.unil.cloud.switch.ch/fma/fma_metadata.zip">fma_metadata.zip</a>. <br>
-I then used Spotify's API to search up these songs by three conditions, track name, artist name, and album name. I used https://pypi.org/project/fuzzywuzzy/ to confirm that the search results were a match at over 66%. Out of 8000 samples I got accurate search results for 1419 of them. I then successfully collected the time signature for 1222 samples. After cleaning, my final dataset consisted of 
+I then used Spotify's API to search up these songs by three conditions, track name, artist name, and album name. I used <a href="https://pypi.org/project/fuzzywuzzy/ ">Fuzzy Wuzzy</a> to confirm that the search results were a match at over 66%. Out of 8000 samples I got accurate search results for 1419 of them. I then successfully collected the time signature for 1222 samples. After cleaning, my final dataset consisted of 
 - 1034 in 4/4 time
 - 128 in 3/4 time
 - 42 in 5/4 time.
