@@ -4,6 +4,16 @@
 
 ## About
 
+### Goal
+ 
+We are all familiar with the impulse of tapping along while vibing to a good song. For a given song, these beats are organized in groups allowing the song to have its structure. This structure is called 'Time signature'. It's commmon for a pop song to be in 4/4 time and for a waltz to have a time signature of 3/4. <br>
+
+<img src="time-signature.png" />
+
+The goal of this project is to use machine learning to classify an audio sample's time signature by finding temporal patterns.<br>
+Beyond an exercise in modelling a human response to a musical stimulus, this can be useful for a dj who wants to filter songs by the way we dance to it, or for music interaction systems which can search through a library of beats and apply a match for a given audio sample. 
+
+
 ### Files
 
 #### Notebooks
@@ -33,31 +43,10 @@ Navigating paths to audio samples and transforming into features, then structuri
     target variable
 
 
-### Goal etc..
- 
---With the advent of neural nets, the idea that a computer has the ability to find patterns within data hasn't been proven more. Through the --use of many convulutional layers, deep learning unlocks puzzles which are too complex for us humans.
-
-The goal of this project is to use machine learning to find temporal patterns in music which give it its structure in time, namely, the time signature. --We are all familiar with the natural impulse of tapping along while vibing to a good song, --
-
-“The aim of a beat tracker is to recover a sequence of time instants from a musical input that are consistent with the times when a human might tap their foot. Beyond an exercise in modelling a human response to a musical stimulus, beat tracking can be used in many applications including musical interaction systems, content-based audio effects, and increasingly as a meaningful temporal segmentation for higher level MIR tasks such as chord extraction, structural segmentation of audio  and music similarity.” 
 
 
 
 
-
-
-
-
-### Some fundamental terminology
-
-Fourier transform
-A few buckets of paint were spilled together and we have a unique blend of colors the fourier transform can be though of the formula which 
-extracts the components of which this unique blend is comrprised of.
-
---Mel is a transformation to have the data similar to how humans hear it.
-
-Mel Frequency Cepstral Coefficient
-"Because the discrete Fourier transform separates its input into components that contribute at discrete frequencies, it has a great number of applications in digital signal processing, e.g., for filtering, and in this context the discretized input to the transform is customarily referred to as a signal, which exists in the time domain. The output is called a spectrum or transform and exists in the frequency domain."
 
 ## Data 
 
@@ -69,7 +58,7 @@ I then used Spotify's API to search up these songs by three conditions, track na
 - 128 in 3/4 time
 - 42 in 5/4 time.
 
-
+---ADD visual of classes for top genre
 
 ### Exploring
 
@@ -79,10 +68,20 @@ For audio features I used Librosa to transform each sample into 20 Mel Frequency
 I then took the mean for each coefficient vector for the length of sample and formed a DataFrame with the target variable being a class in time signature. 
 
 
-
 #### Exlplaining MFCC etc..
 
+----Add visual of how it looks
 
+### Some fundamental terminology
+
+Fourier transform
+A few buckets of paint were spilled together and we have a unique blend of colors the fourier transform can be though of the formula which 
+extracts the components of which this unique blend is comrprised of.
+
+--Mel is a transformation to have the data similar to how humans hear it.
+
+Mel Frequency Cepstral Coefficient
+"Because the discrete Fourier transform separates its input into components that contribute at discrete frequencies, it has a great number of applications in digital signal processing, e.g., for filtering, and in this context the discretized input to the transform is customarily referred to as a signal, which exists in the time domain. The output is called a spectrum or transform and exists in the frequency domain."
 
 
 
