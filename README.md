@@ -6,18 +6,20 @@
 
 ### Goal
  
-We are all familiar with the impulse of tapping along while vibing to a good song. For a given song, these beats are organized in groups allowing the song to have its structure. This structure is called 'Time signature'. It's commmon for a pop song to be in 4/4 time and for a waltz to have a time signature of 3/4. <br>
+We are all familiar with the impulse of tapping along while vibing to a good song. For a given song, these beats are organized in groups allowing the song to have its structure. This structure is called 'Time signature'. It's common for a pop song to be in 4/4 time and for a waltz to have a time signature of 3/4. <br>
 
 <img src="time-signature.png" />
 
 The goal of this project is to use machine learning to classify an audio sample's time signature by finding temporal patterns. Beyond an exercise in modelling a human response to a musical stimulus, this can be useful for a dj who wants to filter songs by the way we dance to it, or for music interaction systems which can search through a library of beats and apply a match for a given audio sample. 
 
 
+<a href="https://docs.google.com/presentation/d/1fQJ5Gml8ZIHwERCDuqDwbLgfnvuWuyouvQpkRJrlMTQ/edit?usp=sharing">Google slides presentation</a>
+
 ### Files
 
 #### Notebooks
 - collecting_data
-Retrieving necessary metadata for the "small" fma audio samples, and collecting time signature from Spotify.
+Retrieving necessary metadata for the "small" free music archive audio samples, and collecting time signature from Spotify.
 - data_preparation_feature_engineering
 Navigating paths to audio samples and transforming into features, then structuring dataframe for models.
 - Modelling
@@ -66,20 +68,7 @@ For audio features I used Librosa to transform each sample into 20 Mel Frequency
 I then took the mean for each coefficient vector for the length of sample and formed a DataFrame with the target variable being a class in time signature. 
 
 
-#### Exlplaining MFCC etc..
 
-----Add visual of how it looks
-
-### Some fundamental terminology
-
-Fourier transform
-A few buckets of paint were spilled together and we have a unique blend of colors the fourier transform can be though of the formula which 
-extracts the components of which this unique blend is comrprised of.
-
---Mel is a transformation to have the data similar to how humans hear it.
-
-Mel Frequency Cepstral Coefficient
-"Because the discrete Fourier transform separates its input into components that contribute at discrete frequencies, it has a great number of applications in digital signal processing, e.g., for filtering, and in this context the discretized input to the transform is customarily referred to as a signal, which exists in the time domain. The output is called a spectrum or transform and exists in the frequency domain."
 
 
 
@@ -98,6 +87,10 @@ work in progress...
 
 work in progress...
 
+
+## Future steps
+
+work in progress...
 
 
 ## Permissions & Licenses
