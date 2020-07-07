@@ -23,7 +23,7 @@ Retrieving necessary metadata for the "small" free music archive audio samples, 
 - data_preparation_feature_engineering
 Navigating paths to audio samples and transforming into features, then structuring dataframe for models.
 - Modelling
-
+Includes baseline model, random forest, xgboost, & Neural net, with evaluations.
 
 
 #### Csv files
@@ -67,7 +67,7 @@ I then used Spotify's API to search up these songs by three conditions, track na
 For audio features I used Librosa to transform each sample into 20 Mel Frequency Cepstral Coefficients (MFCC).
 I then took the mean for each coefficient vector for the length of sample and formed a DataFrame with the target variable being a class in time signature. 
 
-#### Adding a visula with some exploration of these features
+#### Adding a visual with some exploration of these features
 
 
 
@@ -79,20 +79,16 @@ Baseline model scores an accuracy of 85% always classifying the majority class o
 Since I had a significant class imbalance I made use of SMOTE to upsample the two remaining classes of 3/4 and 5/4 time.
 <img src="class_imbalance.png" />
 
-### Models
+### Models & Evaluation
 
 Trained a random forest with 50 estimators got an accuracy of 77% 
-gridsearch with xgboost didnt produce anything significantlly better.
+Gridsearch with xgboost didnt produce anything significantlly better.
 
-I am working on 
-1. removing 5/4 timing, to try and predict the two most common classes in time signature 4/4 and 3/4
-2. check on time signature confidence (from spotify metadata), set a threshold and remove rows which don't pass the threshold feed this into models
-3. More feature engineering, the mean for each MFCC vector may not be the correct choice -Use the full MFCC vector and feed into Sequential neural net
-
-### Evaluation
-
-work in progress...
-
+I went back and did some more feature engineering using the entire MFCC size 20,1291 for each sample.
+Then, I removed 5/4 timing, to try and predict the two most common classes in time signature 4/4 and 3/4.
+Used SMOTE to upsample the smaller class
+I trained a Neural net with 8 epochs and ended up with an accuracy of 87%. 
+The model however, mostly predicted 4/4 and since the y_test set had the majority being 4/4 and remains only slightly better than the baseline.
 
 
 
